@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}The Form{% endblock %}
+
+{% block content %}
+{{ super() }}
+<!--to display details from both the parent and child blocks, without the child block overitting the values from the parent block, a special function has to be used called 'super'-->
+<h1>Please fill out the form</h1>
+<form method="POST" action="/theform">
+                          <input type="text" name="name">
+                          <input type="text" name="location">
+                          <input type="submit" value="Submit">
+</form>
+{% endblock %}
